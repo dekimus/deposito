@@ -18,5 +18,13 @@ class MainTest {
 		double res = dep.getDepositoMax();
 		assertEquals(50.0, res);
 	}
+	
+	@Test
+	void testEstaVacio(){
+		DepositoCombustible dep = new DepositoCombustible(20.0,5.0);
+		dep.consumir(5);
+		boolean res = dep.estaVacio();
+		assertEquals(true, res);
+	}
 
 }
