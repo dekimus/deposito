@@ -22,7 +22,7 @@ class MainTest {
 	@Test
 	void testEstaVacio(){
 		DepositoCombustible dep = new DepositoCombustible(20.0,5.0);
-		dep.consumir(20);
+		dep.consumir(5);
 		boolean res = dep.estaVacio();
 		assertEquals(true, res);
 	}
@@ -33,6 +33,14 @@ class MainTest {
 		dep.fill(15);
 		boolean res = dep.estaLleno();
 		assertEquals(true, res);
+	}
+	
+	@Test
+	void testFill() {
+		DepositoCombustible dep = new DepositoCombustible(20.0,5.0);
+		dep.fill(5);
+		double res = dep.getDepositoNivel();
+		assertEquals(10.0, res);
 	}
 
 }
