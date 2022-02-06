@@ -42,5 +42,13 @@ class MainTest {
 		double res = dep.getDepositoNivel();
 		assertEquals(10.0, res);
 	}
+	
+	@Test
+	void testConsumir() {
+		DepositoCombustible dep = new DepositoCombustible(20.0,5.0);
+		dep.consumir(5);
+		double res = dep.getDepositoNivel();
+		assertEquals(0, res);
+	}
 
 }
